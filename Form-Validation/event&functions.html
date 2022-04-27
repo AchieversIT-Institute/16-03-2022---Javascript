@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Functions - JS</title>
+   <link rel="stylesheet" href="./event&functions.css">
+</head>
+<body>
+    <form action="#" method="post" novalidate id="loginForm">
+        <div class="imgcontainer">
+         <!--  <a href="http://www.achieversit.com" target="_blank"> -->
+            <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="logo" class="avatar" id="ait-logo">
+         <!--  </a> -->
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required id="uname">
+          <span class="d-none" id="userErr">Username can't be empty</span>
+          <br/>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required id="pwd">
+          <span class="d-none" id="passErr">Password can't be empty</span>
+          <br/>
+          <button type="submit" id="loginBtn">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+
+      <script src="events-and-function-form-validations.js"></script>
+</body>
+</html>

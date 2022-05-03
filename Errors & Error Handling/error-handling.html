@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error Handling - JS</title>
+</head>
+<body>
+
+<button id="ait">AchieversIT</button>
+
+
+<script>
+	document.getElementById('ait').addEventListener('click',() =>{
+		window.open('https://www.achieversit.com');
+	})
+	const trainer_name = "Murali Pagadala";
+	const course_name = new String("Javascript");
+	try{
+		//const trainer_name = "Murali Pagadala";
+		trainer_name = "Murali P";
+
+		const fees = 98765432123456;
+		console.log(fees);
+	}catch(Error){
+		alert(Error);
+		console.log(Error);
+	}throw "We should not assign any new value to const identifier";
+	// }finally{
+	// 	alert('No matter what ever it is, i(finally block) executes ');
+	// }
+	
+</script>
+</body>
+</html>

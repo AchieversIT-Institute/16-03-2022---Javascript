@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects in JS</title>
+</head>
+<body>
+<div id="demo"></div>
+<!-- Objects in JS -->
+<script>
+
+	/*
+		What are Objects in Javascript?
+		Why Objects?
+		How many ways can we create Objects?
+		What are predefined objects and examples?
+		What is a user defined object and how to create a user defined Object?
+		Predefined VS User Defined
+
+	*/
+	/*
+		Creation and added properties and their values - Object
+	*/
+	/* Object Literal - Example */
+	let product = {
+		name:"Macbook",
+		model:"Air",
+		description:"The MacBook Air is a line of notebook computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and, in the more modern versions, a thin light structure. The Air was originally positioned above the previous MacBook line as a premium ultraportable.",
+		price:3245687
+	};
+
+	/* why object ?
+
+		 - To store larger data and meaningfull data 
+	*/
+
+	/* How to retrive data from an Object
+
+			- using .(dot) notation
+				object-name.<property-name>
+	 */
+
+	 console.log(product.price);
+
+	 //console.log(product['price']);
+
+	 /* How to create an array */
+
+	 let users = ['sachin',"Dhoni",'Virat','Rohit'];
+
+	 console.log(product,users);
+
+	 /* How many ways can we create Objects? 
+			- Object Literal - Example given above
+			- Object constructor
+	 */
+
+	 /* Object constructor - Example*/
+
+	 function Cart(){
+	 	this.items = [
+					 	{
+							name:"Macbook",
+							model:"Air",
+							description:"The MacBook Air is a line of notebook computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and, in the more modern versions, a thin light structure. The Air was originally positioned above the previous MacBook line as a premium ultraportable.",
+							price:3245687
+						},
+						{
+							name:"Macbook",
+							model:"Air",
+							description:"The MacBook Air is a line of notebook computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and, in the more modern versions, a thin light structure. The Air was originally positioned above the previous MacBook line as a premium ultraportable.",
+							price:3245687
+						},
+						{
+							name:"Macbook",
+							model:"Air",
+							description:"The MacBook Air is a line of notebook computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and, in the more modern versions, a thin light structure. The Air was originally positioned above the previous MacBook line as a premium ultraportable.",
+							price:3245687
+						}
+					]
+	}
+
+	/* HOW TO ACCESS properties of object constructor 
+			
+			- using instance (instance can be created using 'new' operator)
+
+	*/
+
+	let cObj = new Cart();
+
+
+	console.log(cObj.items);
+
+	/* What are predefined objects and examples? 
+
+		 Object Literal		 
+			 - document
+			 - event
+			 - window
+			 - Math
+
+		Object Constructor
+			 - number
+			 - string
+			 - array
+			 - object
+			 - date
+			 
+	*/
+
+	/* Example for 'document' object 
+
+		document.getElementById()
+	*/
+
+	/* Example for predefined Object constructor */
+
+	let today = new Date();
+
+	console.log(today);
+
+	console.log(today.getDate());
+	console.log(today.getMonth());
+	console.log(today.getDay());
+	console.log(today.getHours());
+	console.log(today.getMinutes());
+	console.log(today.getSeconds());
+	console.log(today.getMilliseconds());
+
+	/* Set next day */
+
+	//let nextDay = today.setDate(today.getDate()+1);//new Date((today.getDay()+1));
+
+	//console.log(today.setDate(today.getDate()+1));
+	document.getElementById("demo").innerHTML = new Date();
+
+	/* Create a custom function that takes today date as a param and return d-m-y format */
+
+	function dateConversion(currentDate){
+		return currentDate.getDate()+"-"+(currentDate.getMonth()+1)+"-"+today.getFullYear();
+	}
+
+	console.log(dateConversion(today));
+
+</script>
+</body>
+</html>

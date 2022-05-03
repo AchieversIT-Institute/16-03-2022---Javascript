@@ -37,6 +37,7 @@ form.addEventListener("submit", (e) => {
   validateFields(username, 0, "Username cannot be blank");
   validateFields(email, 1, "Email cannot be blank");
   validateFields(password, 2, "Password cannot be blank");
+  validateFields(confirmPassword, 3, "Confirm Password cannot be blank");
 });
 
 let validateFields = (id, serial, message) => {

@@ -25,7 +25,18 @@
 		name:"Macbook",
 		model:"Air",
 		description:"The MacBook Air is a line of notebook computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and, in the more modern versions, a thin light structure. The Air was originally positioned above the previous MacBook line as a premium ultraportable.",
-		price:3245687
+		price:10000,
+		details: function(){
+			return `<h1>${this.name}</h1>
+					<p>${this.description}</p>
+					<button>Add to cart</button>
+				`;
+		},
+		gstCalc: function(gstPercent){
+			console.log(this.details());
+			console.log(this.price+(this.price*gstPercent/100));
+		}
+
 	};
 
 	/* why object ?
@@ -33,14 +44,20 @@
 		 - To store larger data and meaningfull data 
 	*/
 
-	/* How to retrive data from an Object
+	/* How to retrive data or memebers/methods from an Object(outside)
 
 			- using .(dot) notation
 				object-name.<property-name>
+				object-name.<method-name>
 	 */
 
 	 console.log(product.price);
+	 console.log(product.details());
 
+	 product.gstCalc(10);
+	 product.gstCalc(18);
+
+	 console.log(product.gstPercent);
 	 //console.log(product['price']);
 
 	 /* How to create an array */
@@ -77,6 +94,9 @@
 							price:3245687
 						}
 					]
+		allProducts = function(){
+			//logic
+		}
 	}
 
 	/* HOW TO ACCESS properties of object constructor 
